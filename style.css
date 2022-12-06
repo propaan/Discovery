@@ -84,7 +84,7 @@ svg {
 }
 
 .page2 {
-  background-color: blue;
+  background-color: #181818;
   height: 50%;
 }
 
@@ -94,3 +94,30 @@ svg {
   align-items: flex-end;
 }
 
+.carousel {
+  width: 60%;
+  height: 60%;
+  margin: 0 auto;
+}
+
+#carousel-edit {
+  padding-top: 2%;
+}
+
+.playsound-btn {
+  border-radius: 10px;
+  padding: 5px 10px 5px 10px;
+}
+
+button {
+  font-family: 'Sohne';
+}
+
+.listenning {
+  text-align: center;
+  color: white;
+}
+
+button:hover {
+  cursor: pointer;
+}

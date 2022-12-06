@@ -9,8 +9,12 @@
     <script src="https://cdn.rawgit.com/bradley/Blotter/master/build/blotter.min.js"></script>
     <script src="https://rawgit.com/bradley/Blotter/master/build/materials/liquidDistortMaterial.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <script src="javascript.js"></script>
 </head>
 <body>
+  <audio id="myAudip">
+    <source src="audio/damso.mp3" type="audio/mpeg">
+  </audio>  
 <div class="ctn">
   <div class="presentation">
       <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin slice" viewBox="24 105 156 95" >
@@ -25,7 +29,51 @@
     </div>
   </div>
   <div class="page2">
-    Page 2 content
+
+    <div id="carousel-edit">
+      <div id="carousel" class="carousel slide 300-px-wide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel" data-slide-to="1"></li>
+          <li data-target="#carousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex justify-content-center">
+              <img class="d-block w-50 rounded" src="img/QALF_DAMSO.jpg" alt="First slide">
+            </div>
+            <div class="carousel-caption d-none d-md-block">
+              <button type="button" id="btn-damso" onclick="playMusic('Damso')" class="btn btn-light">Ecouter</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <img class="d-block w-50 rounded" src="img/luther.jpg" alt="First slide">
+            </div>
+            <div class="carousel-caption d-none d-md-block">
+              <button type="button" id="btn-luther" onclick="playMusic('Luther')" class="btn btn-light">Ecouter</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <img class="d-block w-50 rounded" src="img/khali.jpeg" alt="First slide">
+            </div>
+            <div class="carousel-caption d-none d-md-block">
+              <button type="button" id="btn-khali" onclick="playMusic('Khali')" class="btn btn-light">Ecouter</button>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <h1 class="listenning"></h1>
+    </div>
   </div>
 </div>
 </body>
