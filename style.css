@@ -1,17 +1,58 @@
 @font-face {
   font-family: 'Roboto-R';
-  src: url('Roboto-R.ttf');
+  src: url('fonts/Roboto-R.ttf');
+}
+
+body{
+  background-color: black;
 }
 
 @font-face {
   font-family: 'Sohne';
-  src: url('SOHNE.woff2');
+  src: url('fonts/SOHNE.woff2');
 }
 
 html,body{
   width:100%;
   height:100%;
+}
+
+@keyframes rotate {
+  100% {
+     transform: rotate(360deg)
   }
+}
+
+.top-outer {
+  transform-origin: 73px 69px;
+  animation: rotate 30s linear infinite;
+}
+
+.top-inner {
+  transform-origin: 73px 69px;
+  animation: rotate 20s linear infinite;
+}
+
+.bottom-outer {
+  transform-origin: 134px 222px;
+  animation: rotate 30s linear infinite;
+}
+
+.bottom-inner {
+       transform-origin: 134px  222px;
+       animation: rotate 20s linear infinite;
+}
+
+.test {
+  width: 100%;
+	height: 100%;
+}
+svg {
+	width: 100%;
+	height: 100%;
+  position: absolute;
+  z-index: 1;
+}
 
 * {
   margin: 0;
@@ -25,11 +66,21 @@ html,body{
 .presentation {
   height: 50%;
   width: 100%;
-  display: flex;
-  background-color: rgb(255, 255, 255);
-  display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  display: inline-block;
+}
+
+.presentation .text{
+  position: absolute;
+  z-index: 999;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 40%; /* Adjust this value to move the positioned div up and down */
+  text-align: center;
+  color: rgb(0, 0, 0);
 }
 
 .page2 {
@@ -37,9 +88,9 @@ html,body{
   height: 50%;
 }
 
-#brand {
+.brand {
   font-family: 'Sohne';
   font-size: 8em;
-  align-items: center;
+  align-items: flex-end;
 }
 
