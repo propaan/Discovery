@@ -44,7 +44,7 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="d-flex justify-content-center">
-              <img class="w-50" draggable="false" src="img/vinyle.png" alt="First slide">
+              <img class="damso" draggable="false" src="img/damso-vinyl.png" alt="First slide">
             </div>
             <div class="carousel-caption d-none d-md-block">
               <button type="button" id="btn-damso" onclick="playMusic('Damso')" class="btn btn-light">Ecouter</button>
@@ -52,7 +52,7 @@
           </div>
           <div class="carousel-item">
             <div class="d-flex justify-content-center">
-              <img class="d-block w-50 rounded" draggable="false" src="img/luther.jpg" alt="First slide">
+              <img class="luther" draggable="false" src="img/luther-vinyl.png" alt="First slide">
             </div>
             <div class="carousel-caption d-none d-md-block">
               <button type="button" id="btn-luther" onclick="playMusic('Luther')" class="btn btn-light">Ecouter</button>
@@ -60,18 +60,18 @@
           </div>
           <div class="carousel-item">
             <div class="d-flex justify-content-center">
-              <img class="d-block w-50 rounded" draggable="false" src="img/khali.jpeg" alt="First slide">
+              <img class="khali" draggable="false" src="img/khali-vinyl.png" alt="First slide">
             </div>
             <div class="carousel-caption d-none d-md-block">
               <button type="button" id="btn-khali" onclick="playMusic('Khali')" class="btn btn-light">Ecouter</button>
             </div>
           </div>
         </div>
-        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev" onclick="nextPrev()">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next" onclick="nextPrev()">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
@@ -79,8 +79,15 @@
       <div id="playing">
         <img id="playing-gif" src="./img/playing.gif" />
         <h1 class="listenning">Luther - ALAKAZAM</h1>
-      </div> 
+      </div>
+
+      <input type="range" id="volume" name="volume"
+      min="0" max="10" onchange="myFunction()">
     </div>
+
+    
+
+    <div>
   </div>
 </div>
 </body>
