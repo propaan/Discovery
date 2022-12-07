@@ -10,6 +10,7 @@
     <script src="https://rawgit.com/bradley/Blotter/master/build/materials/liquidDistortMaterial.js"></script>
     <link rel="stylesheet" href="style.css" />
     <script src="javascript.js"></script>
+    <script src="https://genius.codes"></script>
 </head>
 <body>
   <audio id="myAudip">
@@ -26,9 +27,12 @@
     </svg>
     <div class="text">
       <h1 class="brand">Discovery.</h1>
+      <img id="down-arrow" src="./img/down-arrow.png" onclick="goDownArtists()"/>
     </div>
   </div>
   <div class="page2">
+
+    <h1 id="week-discovery">Decouvertes de la semaine</h1>
 
     <div id="carousel-edit">
       <div id="carousel" class="carousel slide 300-px-wide" data-ride="carousel">
@@ -40,7 +44,7 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="d-flex justify-content-center">
-              <img class="d-block w-50 rounded" src="img/QALF_DAMSO.jpg" alt="First slide">
+              <img class="w-50" draggable="false" src="img/vinyle.png" alt="First slide">
             </div>
             <div class="carousel-caption d-none d-md-block">
               <button type="button" id="btn-damso" onclick="playMusic('Damso')" class="btn btn-light">Ecouter</button>
@@ -48,7 +52,7 @@
           </div>
           <div class="carousel-item">
             <div class="d-flex justify-content-center">
-              <img class="d-block w-50 rounded" src="img/luther.jpg" alt="First slide">
+              <img class="d-block w-50 rounded" draggable="false" src="img/luther.jpg" alt="First slide">
             </div>
             <div class="carousel-caption d-none d-md-block">
               <button type="button" id="btn-luther" onclick="playMusic('Luther')" class="btn btn-light">Ecouter</button>
@@ -56,7 +60,7 @@
           </div>
           <div class="carousel-item">
             <div class="d-flex justify-content-center">
-              <img class="d-block w-50 rounded" src="img/khali.jpeg" alt="First slide">
+              <img class="d-block w-50 rounded" draggable="false" src="img/khali.jpeg" alt="First slide">
             </div>
             <div class="carousel-caption d-none d-md-block">
               <button type="button" id="btn-khali" onclick="playMusic('Khali')" class="btn btn-light">Ecouter</button>
@@ -72,7 +76,10 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-      <h1 class="listenning"></h1>
+      <div id="playing">
+        <img id="playing-gif" src="./img/playing.gif" />
+        <h1 class="listenning">Luther - ALAKAZAM</h1>
+      </div> 
     </div>
   </div>
 </div>

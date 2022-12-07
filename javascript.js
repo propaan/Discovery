@@ -6,10 +6,17 @@ let playingDamso = false, playingKhali = false, playingLuther = false;
 
 let h1Title = document.getElementsByClassName("listenning");
 
+
+function goDownArtists() {
+  document.getElementsByClassName('page2')[0].scrollIntoView();
+}
+
 function playMusic(artist) {
 
   if (artist === "Damso") {
-
+    let hh = document.getElementById('playing');
+    
+    hh.style.visibility = "visible";
     audioKhali.pause();
     audioKhali.currentTime = 0;
     playingKhali = false;

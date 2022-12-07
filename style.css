@@ -3,6 +3,16 @@
   src: url('fonts/Roboto-R.ttf');
 }
 
+@font-face {
+  font-family: 'Sohne-B';
+  src: url('fonts/SOHNE-B.otf');
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
 body{
   background-color: black;
 }
@@ -120,4 +130,50 @@ button {
 
 button:hover {
   cursor: pointer;
+}
+
+.presentation #down-arrow {
+  margin-top: 5%;
+  height: 80px;
+  border-radius: 30px;
+  background-color: rgba(185, 185, 185, 0.74);
+}
+
+.presentation #down-arrow:hover{
+  background-color: rgba(185, 185, 185, 0.74);
+  filter: invert(37%) sepia(99%) saturate(3042%) hue-rotate(239deg) brightness(102%) contrast(102%);
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+#playing-gif {
+  height: 24px;
+}
+
+#playing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+#week-discovery {
+  margin-top: 0;
+  padding-top: 2%;
+  text-align: center;
+  color: white;
+  font-family: 'Sohne-B';
+}
+
+#rotate {
+  animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
