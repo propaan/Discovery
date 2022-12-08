@@ -7,8 +7,6 @@
   font-family: 'Sohne-B';
   src: url('fonts/SOHNE-B.otf');
 }
-
-
 html {
   scroll-behavior: smooth;
 }
@@ -25,6 +23,19 @@ body{
 html,body{
   width:100%;
   height:100%;
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
 }
 
 @keyframes rotate {
@@ -155,7 +166,6 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  visibility: hidden;
 }
 
 #week-discovery {
@@ -195,4 +205,34 @@ button:hover {
 	padding: 30px;
 	font-size: 40px;
   font-family: 'Sohne-B';
+}
+
+@media only screen and (min-width: 900px) and (orientation: portrait)
+{
+  .carousel {
+    height: 100%;
+    width: 100%;
+  }
+
+}
+
+#player {
+  margin: 0 auto;
+  display: flex;
+  max-width: 200px;
+  justify-content: space-around;
+  padding-top: 1%;
+}
+
+.player-btn {
+  height: 32px;
+  transition: 0.3s;
+}
+
+.player-btn:hover {
+  filter: invert(31%) sepia(0%) saturate(0%) hue-rotate(166deg) brightness(84%) contrast(64%);
+}
+
+#volume {
+  margin-top: 1%;
 }
